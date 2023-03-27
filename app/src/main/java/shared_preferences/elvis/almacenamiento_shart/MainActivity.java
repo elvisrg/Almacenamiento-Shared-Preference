@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Button Guardar;
+    Button Guardar;
     private EditText etUsuario;
 
 
@@ -21,9 +21,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etUsuario=(EditText) findViewById(R.id.etUsuario);
+        Guardar = findViewById(R.id.guardar);
 
         SharedPreferences preferences = getSharedPreferences("datos", Context.MODE_PRIVATE);
         etUsuario.setText(preferences.getString("usuarios",""));
+        Guardar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                guardar(v);
+            }
+        });
+
+
 
     }
 
