@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Almacenamiento_Shart</string>
+    <string name="Usuario">Ingrese el Usuario</string>
+    <string name="btnguardar">Guardar</string>
+</resources>
